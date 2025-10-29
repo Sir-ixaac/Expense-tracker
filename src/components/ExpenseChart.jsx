@@ -34,7 +34,7 @@ const ExpenseChart = () => {
               data={data}
               dataKey="value"
               nameKey="name"
-              outerRadius={100}
+              outerRadius={70}
               fill="#8884d8"
               label>
               {data.map((entry, index) => (
