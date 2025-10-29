@@ -8,7 +8,7 @@ const ExpenseList = () => {
 
   if (!expenses.length) {
     return (
-      <div className="p-4 bg-white rounded shadow text-slate-500">
+      <div className="p-4 bg-white font-bold rounded shadow text-slate-500">
         No expenses yet
       </div>
     );

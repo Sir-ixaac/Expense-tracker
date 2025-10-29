@@ -32,38 +32,38 @@ const ExpenseForm = ({ onAdded }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="space-y-3 p-4 bg-[#54abaa] rounded shadow">
+      className="space-y-3 p-4 bg-white rounded shadow">
       <div>
-        <label className="block text-sm font-semibold text-white">Title</label>
+        <label className="block text-sm font-bold text-blue-800">Title</label>
         <input
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="mt-1 w-full px-3 py-2 text-white outline-0 border rounded"
+          className="mt-1 w-full px-3 py-3 text-blue-800 outline-0 border rounded"
         />
       </div>
       <div>
-        <label className="block text-sm font-semibold text-white">Amount</label>
+        <label className="block text-sm font-bold text-blue-800">Amount</label>
         <input
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
           type="number"
-          className="mt-1 w-full px-3 py-2 text-white outline-0 border rounded"
+          className="mt-1 w-full px-3 py-3 text-blue-800 outline-0 border rounded"
         />
       </div>
       <div>
-        <label className="block text-sm font-semibold text-white">
+        <label className="block text-sm font-bold text-blue-800">
           Category
         </label>
         <input
           value={category}
           onChange={(e) => setCategory(e.target.value)}
-          className="mt-1 w-full px-3 py-2 text-white outline-0 border rounded"
+          className="mt-1 w-full px-3 py-3 text-blue-800 outline-0 border rounded"
         />
       </div>
       <div className="flex justify-end">
         <button
           type="submit"
-          className="px-4 py-2 bg-cyan-500 text-white rounded">
+          className="px-4 py-2 bg-blue-600 font-bold text-white rounded">
           Add Expense
         </button>
       </div>
