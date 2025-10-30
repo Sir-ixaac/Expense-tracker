@@ -62,6 +62,18 @@ const ExpenseForm = ({ onAdded }) => {
       </div>
       <div className="flex justify-end">
         <button
+          type="radio"
+          className="bg-blue-600 font-bold text-white rounded">
+          income
+        </button>
+
+        <button
+          type="radio"
+          className="bg-blue-600 font-bold text-white rounded">
+          Expense
+        </button>
+
+        <button
           type="submit"
           className="px-4 py-2 bg-blue-600 font-bold text-white rounded">
           Add Expense
