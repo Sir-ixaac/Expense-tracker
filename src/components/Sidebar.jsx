@@ -41,7 +41,7 @@ const Sidebar = ({ onClose }) => {
       className="w-64 bg-white border-r h-full relative"
       onClick={(e) => e.stopPropagation()}
     >
-      {/* Close Button for Mobile */}
+      {/* Mobile */}
       <button
         onClick={onClose}
         className="absolute top-4 right-4 text-2xl text-gray-600 md:hidden">
@@ -57,9 +57,9 @@ const Sidebar = ({ onClose }) => {
           onClose={onClose}
         />
         <LinkItem
-          to="/expenses"
+          to="/data-record"
           icon={<FiList />}
-          label="Expenses"
+          label="DataRecord"
           onClose={onClose}
         />
         <LinkItem

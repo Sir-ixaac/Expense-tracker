@@ -1,10 +1,9 @@
-
 import React from "react";
 import Header from "../components/Header.jsx";
 import Sidebar from "../components/Sidebar.jsx";
 import Footer from "../components/Footer.jsx";
 import StatsCards from "../components/StatsCards.jsx";
-import ExpenseChart from "../components/ExpenseChart.jsx";
+import FinancialChart from "../components/FinancialChart.jsx";
 
 const Dashboard = () => {
   return (
@@ -18,7 +17,7 @@ const Dashboard = () => {
           <h2 className="text-2xl font-bold text-white mb-4">Dashboard</h2>
           <div className="space-y-4">
             <StatsCards />
-            <ExpenseChart />
+            <FinancialChart />
           </div>
           <div className="p-5 mt-5">
             <Footer />

@@ -1,9 +1,11 @@
 
 import React, { useState } from "react";
 import { useExpensesStore } from "../hooks/useExpenses.jsx";
+import { useIncomeStore } from "../hooks/useIncome.jsx";
 import toast from "react-hot-toast";
 
-const ExpenseForm = ({ onAdded }) => {
+const ExpenseForm = ({ track = "expense", onAdded }) => {
+  const addIncome = useIncomeStore((s) => s.addIncome);
   const addExpense = useExpensesStore((s) => s.addExpense);
 
   const [title, setTitle] = useState("");
@@ -16,16 +18,16 @@ const ExpenseForm = ({ onAdded }) => {
       toast.error("Please provide title and amount");
       return;
     }
-    const item = addExpense({
-      title,
-      amount: Number(amount),
-      category: category || "General",
-      date: new Date().toISOString(),
-    });
+
+    const data ={ title, amount: Number(amount), category: category || "General", date: new Date().toISOString() };
+
+    const item = track === "income" ? addIncome(data) : addExpense(data);
+
     setTitle("");
     setAmount("");
     setCategory("");
-    toast.success("Expense added");
+
+    toast.success(`${track === "income" ? "Income" : "Expense"} added`);
     if (onAdded) onAdded(item);
   };
 
@@ -62,21 +64,9 @@ const ExpenseForm = ({ onAdded }) => {
       </div>
       <div className="flex justify-end">
         <button
-          type="radio"
-          className="bg-blue-600 font-bold text-white rounded">
-          income
-        </button>
-
-        <button
-          type="radio"
-          className="bg-blue-600 font-bold text-white rounded">
-          Expense
-        </button>
-
-        <button
           type="submit"
           className="px-4 py-2 bg-blue-600 font-bold text-white rounded">
-          Add Expense
+          {track === "income" ? "Add Income" : "Add Expense"}
         </button>
       </div>
     </form>

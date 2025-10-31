@@ -2,8 +2,8 @@
 import React from "react";
 import Header from "../components/Header.jsx";
 import Sidebar from "../components/Sidebar.jsx";
-import ExpenseChart from "../components/ExpenseChart.jsx";
 import Footer from "../components/Footer.jsx";
+import FinancialChart from "../components/FinancialChart.jsx";
 
 const Reports = () => {
   return (
@@ -15,7 +15,7 @@ const Reports = () => {
         </div>
         <main className="flex-1 p-6">
           <h2 className="text-2xl text-white font-bold mb-4">Reports</h2>
-          <ExpenseChart />
+          <FinancialChart />
         </main>
       </div>
 
