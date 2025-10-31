@@ -2,8 +2,8 @@ import React from "react";
 
 const TrackSelector = ({ value, onChange }) => {
   return (
-    <div className="flex mb-4">
-      <label className="font-semibold text-white">Select Track:</label>
+    <div className="flex items-center gap-3 mb-4">
+      <label className="font-semibold text-sm md:text-lg text-white">Select Track:</label>
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
