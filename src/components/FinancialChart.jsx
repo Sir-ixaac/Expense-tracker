@@ -33,7 +33,7 @@ const FinancialChart = () => {
   return (
     <div className="p-4 bg-white rounded shadow">
       <h3 className="font-bold mb-10">Income vs Expense</h3>
-      <div style={{ width: "100%", height: 430 }}>
+      <div style={{ width: "100%", height: 300 }}>
         <ResponsiveContainer>
           <PieChart>
             <Pie
