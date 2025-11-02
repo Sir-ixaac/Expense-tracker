@@ -8,10 +8,10 @@ export const useIncomeStore = create(
     (set) => ({
       income: [],
 
-      addIncome: (item) => {
-        const entry = { id: uuidv4(), ...item };
-        set((s) => ({ income: [...s.income, entry] }));
-        return entry;
+      addIncome: (income) => {
+        const item = { id: uuidv4(), ...income };
+        set((s) => ({ income: [...s.income, item] }));
+        return item;
       },
 
       updateIncome: (id, updates) =>
