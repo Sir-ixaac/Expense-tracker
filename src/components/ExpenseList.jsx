@@ -22,7 +22,7 @@ const ExpenseList = ({ track = "expense" }) => {
         .slice()
         .reverse()
         .map((e) => (
-          <ExpenseCard key={e.id} expense={e} />
+          <ExpenseCard key={e.id} expense={e} track={track} />
         ))}
     </div>
   );

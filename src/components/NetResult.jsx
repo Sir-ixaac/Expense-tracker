@@ -23,13 +23,13 @@ const NetResult = () => {
 
   return (
     <div
-      className={`mt-6 w-full p-5 rounded-2xl text-center shadow-sm border 
+      className={`mt-6 w-full p-5 rounded-lg text-center shadow-sm border 
         ${
           balance >= 0
             ? "border-green-200 bg-green-50"
             : "border-red-200 bg-red-50"
         }`}>
-      <h2 className="text-xl font-semibold text-gray-800 mb-2">
+      <h2 className="text-xl font-bold text-gray-800 mb-2">
         Net Result
       </h2>
 

@@ -3,9 +3,20 @@ import React from "react";
 import { formatCurrency, formatDate } from "../utils/helpers";
 import { FiTrash2 } from "react-icons/fi";
 import { useExpensesStore } from "../hooks/useExpenses.jsx";
+import { useIncomeStore } from "../hooks/useIncome.jsx";
 
-const ExpenseCard = ({ expense }) => {
+const ExpenseCard = ({ expense, track }) => {
   const removeExpense = useExpensesStore((s) => s.removeExpense);
+  const removeIncome = useIncomeStore((s) => s.removeIncome);
+
+  const handleDelete = () => {
+    if (track === "income") {
+      removeIncome(expense.id);
+    } else {
+      removeExpense(expense.id);
+    }
+  };
+
   return (
     <div className="flex items-center font-semibold justify-between p-3 bg-white text-black rounded shadow">
       <div>
@@ -17,7 +28,7 @@ const ExpenseCard = ({ expense }) => {
       <div className="flex items-center gap-4">
         <div className="font-semibold">{formatCurrency(expense.amount)}</div>
         <button
-          onClick={() => removeExpense(expense.id)}
+          onClick={handleDelete}
           className="p-2 rounded hover:bg-slate-100">
           <FiTrash2 />
         </button>

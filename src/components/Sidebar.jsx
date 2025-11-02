@@ -38,7 +38,7 @@ const Sidebar = ({ onClose }) => {
 
   return (
     <aside
-      className="w-64 bg-white border-r h-full relative"
+      className="w-64 bg-white border-r h-full fixed left-0 z-40 shadow-md"
       onClick={(e) => e.stopPropagation()}
     >
       {/* Mobile */}

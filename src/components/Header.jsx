@@ -27,7 +27,7 @@ const Header = () => {
   return (
     <>
       {/* Header */}
-      <header className="flex items-center justify-between p-4 bg-white shadow relative">
+      <header className="flex fixed items-center justify-between p-4 bg-white shadow w-full z-30">
         {/* Menu Icon for Mobile */}
         <button
           onClick={toggleSidebar}
@@ -35,7 +35,6 @@ const Header = () => {
           <FiMenu />
         </button>
 
-        {/* Company Name */}
         <div className="flex items-center justify-between w-full">
           <div className="hidden md:block">
             <Link to="/" className="text-lg font-bold text-blue-800">
@@ -43,7 +42,7 @@ const Header = () => {
             </Link>
           </div>
         
-        {/* Hello User (mobile + desktop) */}
+        {/* Hello User */}
         {user && (
           <span className="text-lg font-bold text-blue-800 absolute left-4 md:static md:px-7">
             Hello, {user.name}
@@ -51,7 +50,7 @@ const Header = () => {
         )}
         </div>
 
-        {/* Logout Button (Desktop Only) */}
+        {/* Logout */}
         <button
           onClick={handleLogout}
           className="hidden md:flex items-center gap-2 px-3 py-1 rounded bg-rose-500 text-white hover:opacity-90">
@@ -73,7 +72,6 @@ const Header = () => {
               onClick={closeSidebar}>
               </div>
 
-            {/* Sidebar Slide-In */}
             <motion.div
               initial={{ x: -250 }}
               animate={{ x: 0 }}

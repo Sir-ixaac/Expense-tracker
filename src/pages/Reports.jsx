@@ -7,10 +7,10 @@ import FinancialChart from "../components/FinancialChart.jsx";
 
 const Reports = () => {
   return (
-    <div className="min-h-screen bg-blue-700">
+    <div className=" bg-[#7798c8]">
       <Header />
-      <div className="flex">
-        <div className="hidden md:block">
+      <div className="flex pt-16">
+        <div className="hidden md:block w-64">
           <Sidebar />
         </div>
         <main className="flex-1 p-6">

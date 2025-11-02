@@ -27,19 +27,19 @@ const StatsCards = () => {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div className="bg-white p-4 rounded-lg shadow text-center">
             <p className="text-sm text-gray-500">Total Income</p>
-            <p className="text-2xl font-bold text-green-600">
+            <p className="font-bold text-green-600">
               {formatCurrency(totalIncome)}
             </p>
           </div>
 
           <div className="bg-white p-4 rounded-lg shadow text-center">
             <p className="text-sm text-gray-500">Income Records</p>
-            <p className="text-2xl font-bold text-blue-600">{incomeCount}</p>
+            <p className="font-bold text-blue-600">{incomeCount}</p>
           </div>
 
           <div className="bg-white p-4 rounded-lg shadow text-center">
             <p className="text-sm text-gray-500">Average Income</p>
-            <p className="text-2xl font-bold text-yellow-600">
+            <p className="font-bold text-yellow-600">
               {formatCurrency(avgIncome)}
             </p>
           </div>
@@ -52,19 +52,19 @@ const StatsCards = () => {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div className="bg-white p-4 rounded-lg shadow text-center">
             <p className="text-sm text-gray-500">Total Expense</p>
-            <p className="text-2xl font-bold text-red-600">
+            <p className="font-bold text-red-600">
               {formatCurrency(totalExpense)}
             </p>
           </div>
 
           <div className="bg-white p-4 rounded-lg shadow text-center">
             <p className="text-sm text-gray-500">Expense Records</p>
-            <p className="text-2xl font-bold text-blue-600">{expenseCount}</p>
+            <p className="font-bold text-blue-600">{expenseCount}</p>
           </div>
 
           <div className="bg-white p-4 rounded-lg shadow text-center">
             <p className="text-sm text-gray-500">Average Expense</p>
-            <p className="text-2xl font-bold text-yellow-600">
+            <p className="font-bold text-yellow-600">
               {formatCurrency(avgExpense)}
             </p>
           </div>
